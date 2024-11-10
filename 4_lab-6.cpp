@@ -71,15 +71,10 @@ int main(void) {
 	scanf("%d", &sizeG2);
 
 	G1 = createG(sizeG1);
-	G1[0][0] = 0; G1[0][1] = 1;
-	G1[1][0] = 1; G1[1][1] = 0;
 	printf("1 graf\n");
 	printG(G1, sizeG1);
 
 	G2 = createG(sizeG2);
-	G2[0][0] = 0; G2[0][1] = 1; G2[0][2] = 1;
-	G2[1][0] = 1; G2[1][1] = 0; G2[1][2] = 1;
-	G2[2][0] = 0; G2[2][1] = 1; G2[2][2] = 0;
 	printf("2 graf\n");
 	printG(G2, sizeG2);
 
