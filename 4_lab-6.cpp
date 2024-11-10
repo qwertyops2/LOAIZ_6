@@ -82,5 +82,4 @@ int main(void) {
 	G3 = decUG(G1, sizeG1, G2, sizeG2, G3);
 	printf("Матрица смежности декартова произведения графов:\n");
 	printG(G3, sizeG1 * sizeG2);
-
 }
