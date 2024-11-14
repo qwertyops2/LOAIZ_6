@@ -61,9 +61,10 @@
 //	return G;
 //}
 //
-//int** contrE(int** G, int size, int v1, int v2) {
+//int** contrE(int** G, int size, int v1, int v2, int* flag) {
 //	if (G[v1][v2] != 1) {
-//		printf("reb no");
+//		printf("reb no\n");
+//		*flag = 1;
 //		return G;
 //	}
 //	else {
@@ -95,6 +96,7 @@
 //			Gtemp[i][j] = G[i][j];
 //		}
 //	}
+//	Gtemp[v][size] = Gtemp[size][v] = 1;
 //	for (int i = 0; i < size; i++) {
 //		free(G[i]);
 //	}
@@ -148,12 +150,14 @@
 //	G4 = createG(sizeG4);
 //	printf("4 graf: \n");
 //	printG(G4, sizeG4);
-//
+//	int flag = 0;
 //	printf("Versh dlya udaleniya mejdu rebro: ");
 //	scanf("%d %d", &v3, &v4);
-//	G44 = contrE(G4, sizeG4, v3 - 1, v4 - 1);
-//	printf("4 graf contrE^\n");
-//	printG(G44, sizeG4-1);
+//	G44 = contrE(G4, sizeG4, v3 - 1, v4 - 1, &flag);
+//	printf("4 graf contrE:\n");
+//	if (flag) printG(G44, sizeG4);
+//	else printG(G44, sizeG4 - 1);
+//	
 //
 //	int v5;
 //	printf("Vvedite kol-vo versh 5 grafa: ");
@@ -163,7 +167,7 @@
 //	printf("5 graf: \n");
 //	printG(G5, sizeG5);
 //
-//	printf("Versh dlya copirky: ");
+//	printf("Versh dlya raschepleniya: ");
 //	scanf("%d", &v5);
 //	G55 = splitV(G5, sizeG5, v5 - 1);
 //	printf("5 graf split\n");
