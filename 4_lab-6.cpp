@@ -64,7 +64,6 @@ int main(void) {
 
 	srand(1235235235);
 
-	printf("-=-=-=-=-=-ZADANIE 1-=-=-=-=-=-=\n");
 	printf("Vvedite kol-vo versh 1 grafa: ");
 	scanf("%d", &sizeG1);
 	printf("Vvedite kol-vo versh 2 grafa: ");
@@ -80,6 +79,6 @@ int main(void) {
 
 	G3 = createG(sizeG1 * sizeG2);
 	G3 = decUG(G1, sizeG1, G2, sizeG2, G3);
-	printf("Матрица смежности декартова произведения графов:\n");
+	printf("Resultat decU grafov:\n");
 	printG(G3, sizeG1 * sizeG2);
 }
